@@ -1,0 +1,105 @@
+// ================= BENEFITS ================= //
+
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        width: 24%;
+        padding: 2rem 1.2rem;
+
+        background: $color-gray;
+        border-radius: 3rem;
+    }
+    &__upper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__lower {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    &__title {
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+    &__icon {
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 2rem;
+        & img {
+            @include img-fit;
+            object-fit: contain;
+        }
+    }
+    &__text {
+        color: $color-white2;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 1.3;
+        &--orange {
+            color: $color-orange;
+        }
+    }
+}
+
+// ================= MEDIA ================= //
+@media (max-width: 1230px) {
+    .benefits {
+        &__item {
+            padding: 2rem 1rem;
+        }
+        &__title {
+            font-size: 2.7rem;
+        }
+        // &__text {
+        //     font-size: 1.9rem;
+        // }
+    }
+}
+@media (max-width: 990px) {
+    .benefits {
+        &__item {
+            width: 48%;
+            height: 38rem;
+
+            margin-bottom: 3rem;
+            padding: 2.5rem;
+        }
+    }
+}
+@media (max-width: 770px) {
+}
+@media (max-width: 575px) {
+    .benefits {
+        justify-content: center;
+        &__item {
+            width: 95%;
+            height: 27rem;
+
+            margin-bottom: 2rem;
+            padding: 2rem 1rem;
+        }
+        &__title {
+            font-size: 2.3rem;
+        }
+        &__icon {
+            width: 5rem;
+            height: 5rem;
+            margin-bottom: 0;
+        }
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
+}

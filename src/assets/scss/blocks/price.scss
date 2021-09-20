@@ -1,0 +1,116 @@
+// ================= Price ================= //
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        width: 31%;
+        padding: 3rem 1.2rem;
+
+        @include gradient-2;
+        border-radius: 2rem;
+    }
+    &__upper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &__lower {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__cost {
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-orange;
+        margin-bottom: 2rem;
+
+        // @include text-shadow-orange;
+    }
+    &__name {
+        font-size: 2.7rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    &__terms {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $color-white2;
+
+        margin-bottom: 5rem;
+
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -70%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            display: block;
+            width: 70%;
+            height: 2px;
+            background-color: $color-orange;
+        }
+    }
+    &__features {
+        display: flex;
+        flex-direction: column;
+    }
+    &__clause {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        padding-left: 3rem;
+
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            content: "";
+            width: 1.8rem;
+            height: 1.8rem;
+            background: url(./../../assets/images/price/check-mark.svg);
+            background-size: cover;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+// ================= MEDIA ================= //
+@media (max-width: 1230px) {
+}
+@media (max-width: 990px) {
+    .price {
+        flex-direction: column;
+        align-items: center;
+        &__item {
+            width: 60%;
+            margin-bottom: 2rem;
+        }
+    }
+}
+@media (max-width: 770px) {
+    .price {
+        &__item {
+            width: 80%;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .price {
+        &__item {
+            width: 100%;
+        }
+    }
+}

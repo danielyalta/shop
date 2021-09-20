@@ -1,0 +1,66 @@
+// ================= VARS ================= //
+
+$color-darkgray: hsl(0, 0, 4);
+$color-darkgray2: hsl(0, 0, 8);
+$color-gray: hsl(240, 3, 12);
+$color-gray2: hsl(240, 2, 9);
+
+$color-orange: hsl(19, 89, 54);
+$color-orange2: #ff8400;
+$color-orange3: #ffa95c;
+$color-orange4: #f7a85b;
+
+$color-green: hsl(142, 81, 57);
+
+$color-white: hsl(0, 0, 100);
+$color-white2: hsl(0, 0, 84);
+$color-black: hsl(0, 0, 2);
+
+$font-main: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+
+$border-fancy: 85% 15% 84% 16% / 9% 91% 9% 91%;
+$border-fancy-reverse: 9% 91% 9% 91% / 85% 15% 84% 16%;
+
+// ================= Mixins ================= //
+
+@mixin img-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gradient-1 {
+    background: $color-gray;
+    background: -moz-linear-gradient(to bottom, $color-gray, $color-darkgray);
+    background: -webkit-linear-gradient(to bottom, $color-gray, $color-darkgray);
+    background: linear-gradient(to bottom, $color-gray, $color-black);
+}
+
+@mixin gradient-2 {
+    background: $color-gray;
+    background: -moz-linear-gradient(to bottom, $color-gray, $color-darkgray2);
+    background: -webkit-linear-gradient(to bottom, $color-gray, $color-darkgray2);
+    background: linear-gradient(to bottom, $color-gray, $color-darkgray2);
+}
+
+@mixin box-shadow-btn {
+    -webkit-box-shadow: $color-orange3 0px 0px 22px;
+    -moz-box-shadow: $color-orange3 0px 0px 22px;
+    box-shadow: $color-orange3 0px 0px 22px;
+}
+
+@mixin text-shadow-orange {
+    text-shadow: $color-orange3 1px 1px 2px;
+}

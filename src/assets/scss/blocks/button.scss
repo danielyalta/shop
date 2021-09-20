@@ -1,0 +1,70 @@
+// ================= BUTTON ================= //
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 7rem;
+
+    background: $color-orange2;
+    -webkit-tap-highlight-color: transparent;
+    color: $color-white;
+
+    border-radius: 2rem;
+    font-family: $font-main;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    position: relative;
+    z-index: 2;
+
+    transition: color 0.5s ease;
+    &::before {
+        content: "";
+        @include box-shadow-btn;
+        opacity: 0.4;
+
+        position: absolute;
+        inset: 0;
+        border-radius: 2rem;
+        z-index: -1;
+
+        transition: opacity 0.5s ease;
+    }
+    &:hover {
+        color: $color-black;
+    }
+    &:hover:before {
+        opacity: 1;
+    }
+}
+
+// ================= MEDIA ================= //
+
+@media (max-width: 1230px) {
+    .btn {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 990px) {
+    .btn {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .btn {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .btn {
+        padding: 1.5rem 4rem;
+
+        font-size: 1.4rem;
+    }
+}
