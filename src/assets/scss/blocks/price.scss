@@ -8,51 +8,52 @@
     &__item {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
 
         width: 31%;
-        padding: 3rem 1.2rem;
+        padding: 3rem 2rem;
 
         @include gradient-2;
         border-radius: 2rem;
     }
-    &__upper {
+    &__info {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    &__lower {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     &__cost {
         font-size: 3rem;
         font-weight: 700;
-        text-transform: uppercase;
         color: $color-orange;
         margin-bottom: 2rem;
-
-        // @include text-shadow-orange;
     }
     &__name {
         font-size: 2.7rem;
         font-weight: 700;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
     &__terms {
-        font-size: 1.8rem;
+        max-width: 90%;
+        font-size: 1.6rem;
         font-weight: 500;
         color: $color-white2;
 
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
+    }
+    &__features {
+        display: flex;
+        flex-direction: column;
+        min-height: 19rem;
+
+        padding: 2rem 3rem 0 3rem;
 
         position: relative;
 
-        &:after {
+        &:before {
             content: "";
             position: absolute;
-            bottom: -70%;
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
@@ -61,10 +62,6 @@
             height: 2px;
             background-color: $color-orange;
         }
-    }
-    &__features {
-        display: flex;
-        flex-direction: column;
     }
     &__clause {
         font-size: 1.6rem;
@@ -98,6 +95,9 @@
             width: 60%;
             margin-bottom: 2rem;
         }
+        &__features {
+            min-height: auto;
+        }
     }
 }
 @media (max-width: 770px) {
@@ -111,6 +111,9 @@
     .price {
         &__item {
             width: 100%;
+        }
+        &__terms {
+            max-width: 100%;
         }
     }
 }

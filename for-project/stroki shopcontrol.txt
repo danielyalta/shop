@@ -1,0 +1,34 @@
+https://opsurt.ru/
+
+white hsl(0,0,100) - #fff
+black hsl(0,0,2) - #050505
+darkgrey hsl(0,0,4) - #0A0A0A
+darkgrey hsl(0,0,7) - #121212
+grey hsl(240,3,12) - #1E1E20
+orange hsl(19deg 89% 54%) - #F26321
+green hsl(142,81,57) - #39EA7A
+
+
+
+
+"Gerbera", sans-serif;
+-webkit-linear-gradient( 
+90deg, #ff8400 0%, #ffa95c 100%, #f7a85b 100%);
+
+0px 0px 35px 0px rgb(255 114 0 / 43%)
+
+
+
+shopcontrolboss@gmail.com
+
++380977647445
++38-095-211-91-99
+
+
+Пункты МЕНЮ:
+- Преимущества
+- Оборудование
+- Стоимость
+- Контакты
+
+

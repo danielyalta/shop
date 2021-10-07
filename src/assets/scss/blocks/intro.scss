@@ -60,7 +60,7 @@
 
         position: absolute;
 
-        z-index: -1;
+        z-index: 1;
         transform: translateY(-50%);
 
         & img {
@@ -156,9 +156,6 @@
         }
         &__picture {
             height: 110px;
-        }
-        &__picture--right {
-            top: 78%;
         }
     }
 }

@@ -55,6 +55,13 @@ $border-fancy-reverse: 9% 91% 9% 91% / 85% 15% 84% 16%;
     background: linear-gradient(to bottom, $color-gray, $color-darkgray2);
 }
 
+@mixin gradient-3 {
+    background: $color-gray;
+    background: -moz-linear-gradient(to top, $color-darkgray, $color-darkgray2);
+    background: -webkit-linear-gradient(to top, $color-darkgray, $color-darkgray2);
+    background: linear-gradient(to top, $color-darkgray, $color-darkgray2);
+}
+
 @mixin box-shadow-btn {
     -webkit-box-shadow: $color-orange3 0px 0px 22px;
     -moz-box-shadow: $color-orange3 0px 0px 22px;

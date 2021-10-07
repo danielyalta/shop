@@ -3,20 +3,22 @@
 .main {
     position: relative;
     overflow: hidden;
+    // z-index: -1;
+    @include gradient-3;
 
-    &::before {
-        content: "";
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        top: 0;
-        left: 0;
+    // &::before {
+    //     content: "";
+    //     position: fixed;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: -1;
+    //     top: 0;
+    //     left: 0;
 
-        background: url(../images/fancy/cornered-stairs.svg) center no-repeat;
-        background-size: cover;
-        will-change: transform;
-    }
+    //     background: url(../images/fancy/cornered-stairs.svg) center no-repeat;
+    //     background-size: cover;
+    //     will-change: transform;
+    // }
 }
 
 .fixed + .main {

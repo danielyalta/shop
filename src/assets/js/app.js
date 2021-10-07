@@ -48,22 +48,44 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     // ============ Smooth scrolling to Nav-links ============ //
-    document
-        .querySelectorAll('.nav__item a[href^="#"]')
-        .forEach(trigger => {
-            trigger.onclick = function (e) {
-                e.preventDefault();
-                let hash = this.getAttribute('href');
-                let target = document.querySelector(hash);
-                let headerOffset = 50;
-                let elementPosition = target.offsetTop;
-                let offsetPosition = elementPosition - headerOffset;
+    //     document.querySelectorAll('.nav__item a[href^="#"]')
+    //         .forEach(trigger => {
+    //             trigger.onclick = function (e) {
+    //                 e.preventDefault();
+    //                 let hash = this.getAttribute('href');
+    //                 let target = document.querySelector(hash);
+    //                 let headerOffset = 50;
+    //                 let elementPosition = target.offsetTop;
+    //                 let offsetPosition = elementPosition - headerOffset;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            };
-        });
+    //                 window.scrollTo({
+    //                     top: offsetPosition,
+    //                     behavior: "smooth"
+    //                 });
+    //             };
+    //         });
+
+    // });
+
+    // ============ Smooth scrolling to Nav-links ============ //
+
+
+    const introBtn = document.getElementById('introBtn')
+
+    navLinks.forEach(trigger => {
+        trigger.onclick = function (e) {
+            e.preventDefault();
+            let hash = this.getAttribute('href');
+            let target = document.querySelector(hash);
+            let headerOffset = 50;
+            let elementPosition = target.offsetTop;
+            let offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        };
+    });
 
 });
