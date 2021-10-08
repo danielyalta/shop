@@ -58,9 +58,9 @@
             transform: translateX(-50%);
             z-index: 1;
             display: block;
-            width: 70%;
-            height: 2px;
-            background-color: $color-orange;
+            width: 50%;
+            height: 1px;
+            @include gradient-4;
         }
     }
     &__clause {

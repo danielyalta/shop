@@ -1,0 +1,21 @@
+// ================= Scroll-bar ================= //
+
+::-webkit-scrollbar {
+    width: 2.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: $color-gray3;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100vw;
+    // background: $color-orange;
+    @include gradient-1;
+}
+
+@supports (scrollbar-color: black blue) {
+    * {
+        scrollbar-color: $color-orange $color-gray3;
+    }
+}

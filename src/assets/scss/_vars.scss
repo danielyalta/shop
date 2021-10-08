@@ -4,6 +4,7 @@ $color-darkgray: hsl(0, 0, 4);
 $color-darkgray2: hsl(0, 0, 8);
 $color-gray: hsl(240, 3, 12);
 $color-gray2: hsl(240, 2, 9);
+$color-gray3: hsl(240, 2, 22);
 
 $color-orange: hsl(19, 89, 54);
 $color-orange2: #ff8400;
@@ -60,6 +61,13 @@ $border-fancy-reverse: 9% 91% 9% 91% / 85% 15% 84% 16%;
     background: -moz-linear-gradient(to top, $color-darkgray, $color-darkgray2);
     background: -webkit-linear-gradient(to top, $color-darkgray, $color-darkgray2);
     background: linear-gradient(to top, $color-darkgray, $color-darkgray2);
+}
+
+@mixin gradient-4 {
+    background: $color-orange;
+    background: -moz-linear-gradient(to top, $color-darkgray, $color-darkgray2);
+    background: -webkit-linear-gradient(to top, $color-darkgray, $color-darkgray2);
+    background: linear-gradient(to right, $color-orange2, $color-orange4);
 }
 
 @mixin box-shadow-btn {
