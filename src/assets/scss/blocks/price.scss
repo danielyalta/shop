@@ -2,25 +2,30 @@
 
 .price {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 
     &__item {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        flex-direction: column;        
 
         width: 31%;
         padding: 3rem 2rem;
+        margin-right: 4rem;           
+        min-height: 350px;
 
         @include gradient-2;
         border-radius: 2rem;
+        &:last-child {
+            margin-right: 0;
+        }
     }
     &__info {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: 1rem;
     }
     &__cost {
         font-size: 3rem;
@@ -34,10 +39,12 @@
         margin-bottom: 2rem;
     }
     &__terms {
-        max-width: 90%;
+        max-width: 85%;
         font-size: 1.6rem;
         font-weight: 500;
+        line-height: 1.5;
         color: $color-white2;
+        text-align: left;
 
         margin-bottom: 2rem;
     }
@@ -45,8 +52,8 @@
         display: flex;
         flex-direction: column;
         min-height: 19rem;
-
-        padding: 2rem 3rem 0 3rem;
+        
+        padding: 2rem 4rem 0 4rem;
 
         position: relative;
 
@@ -59,12 +66,12 @@
             z-index: 1;
             display: block;
             width: 50%;
-            height: 1px;
+            height: 3px;
             @include gradient-4;
         }
     }
     &__clause {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         margin-bottom: 1rem;
         padding-left: 3rem;
 
@@ -94,6 +101,7 @@
         &__item {
             width: 60%;
             margin-bottom: 2rem;
+            margin-right: 0;
         }
         &__features {
             min-height: auto;
@@ -112,8 +120,8 @@
         &__item {
             width: 100%;
         }
-        &__terms {
-            max-width: 100%;
-        }
+        // &__terms {
+        //     max-width: 100%;
+        // }
     }
 }
