@@ -1,184 +1,191 @@
 // ================= INTRO ================= //
 
 .intro {
-    padding: 10rem;
-    height: auto;
-    width: 100%;
+  padding: 10rem;
+  height: auto;
+  width: 100%;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  .btn--intro {
+    display: none;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    width: 70%;
+
+    margin-bottom: 8rem;
+
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+  }
+  &__subtitle {
+    width: 85%;
+
+    margin-bottom: 12rem;
+
+    color: $color-white2;
+    font-size: 2.8rem;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 500;
+    font-style: italic;
 
     position: relative;
-    display: flex;
-    align-items: center;
-    &__inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    & p {
+      margin-top: 3rem;
     }
-    &__title {
-        width: 70%;
 
-        margin-bottom: 8rem;
-
-        font-size: 6rem;
-        font-weight: 700;
-        text-align: center;
-        line-height: 1.2;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: block;
+      width: 35%;
+      height: 2px;
+      background: $color-orange;
     }
-    &__subtitle {
-        width: 85%;
+  }
+  &__picture {
+    height: 18rem;
+    width: 18rem;
 
-        margin-bottom: 12rem;
+    position: absolute;
 
-        color: $color-white2;
-        font-size: 2.8rem;
-        text-align: center;
-        line-height: 1.4;
-        font-weight: 500;
-        font-style: italic;
+    z-index: 1;
+    transform: translateY(-50%);
 
-        position: relative;
-        & p {
-            margin-top: 3rem;
-        }
-
-        &:after {
-            content: "";
-            position: absolute;
-            bottom: -30%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-            display: block;
-            width: 35%;
-            height: 2px;
-            background: $color-orange;
-        }
+    & img {
+      @include img-fit;
+      object-fit: contain;
     }
-    &__picture {
-        height: 18rem;
-        width: 18rem;
-
-        position: absolute;
-
-        z-index: 1;
-        transform: translateY(-50%);
-
-        & img {
-            @include img-fit;
-            object-fit: contain;
-        }
-    }
-    &__picture--left {
-        margin-left: 2rem;
-        left: 0;
-        top: 10%;
-    }
-    &__picture--right {
-        right: 0;
-        margin-right: 2rem;
-        top: 70%;
-    }
+  }
+  &__picture--left {
+    margin-left: 2rem;
+    left: 0;
+    top: 10%;
+  }
+  &__picture--right {
+    right: 0;
+    margin-right: 2rem;
+    top: 70%;
+  }
 }
 
 // ================= MEDIA ================= //
 
 @media (max-width: 1280px) {
-    .intro {
-        padding: 9rem;
-        &__title {
-            margin-bottom: 6rem;
-            font-size: 5.5rem;
-        }
-        &__subtitle {
-            font-size: 2.6rem;
-            width: 80%;
-        }
-        &__picture {
-            height: 13rem;
-            width: 13rem;
-        }
-        &__picture--left {
-            margin-left: 1rem;
-        }
-        &__picture--right {
-            margin-right: 1rem;
-        }
+  .intro {
+    padding: 9rem;
+    &__title {
+      margin-bottom: 6rem;
+      font-size: 5.5rem;
     }
+    &__subtitle {
+      font-size: 2.6rem;
+      width: 80%;
+    }
+    &__picture {
+      height: 13rem;
+      width: 13rem;
+    }
+    &__picture--left {
+      margin-left: 1rem;
+    }
+    &__picture--right {
+      margin-right: 1rem;
+    }
+  }
 }
 @media (max-width: 1100px) {
-    .intro {
-        padding: 8rem;
-        &__picture {
-            height: 10rem;
-            width: 10rem;
-        }
+  .intro {
+    padding: 8rem;
+    &__picture {
+      height: 10rem;
+      width: 10rem;
     }
+  }
 }
 @media (max-width: 990px) {
-    .intro {
-        padding: 7rem;
-        &__title {
-            font-size: 4rem;
-            width: 78%;
-        }
-        &__subtitle {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 10rem;
-        }
-        &__picture {
-            height: 120px;
-            width: 120px;
-        }
-        &__picture--left {
-            display: none;
-        }
-        &__picture--right {
-            margin-right: 0;
-        }
+  .intro {
+    padding: 7rem;
+    &__title {
+      font-size: 4rem;
+      width: 78%;
     }
+    &__subtitle {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 10rem;
+    }
+    &__picture {
+      height: 120px;
+      width: 120px;
+    }
+    &__picture--left {
+      display: none;
+    }
+    &__picture--right {
+      margin-right: 0;
+    }
+  }
 }
 @media (max-width: 770px) {
-    .intro {
-        padding: 6rem;
-        &__title {
-            margin-bottom: 5rem;
-            font-size: 3.5rem;
-            width: 90%;
-        }
-        &__subtitle {
-            width: 90%;
-            margin-bottom: 8rem;
-            font-size: 2.2rem;
-            &::after {
-                bottom: -15%;
-            }
-        }
-        &__picture {
-            height: 110px;
-        }
+  .intro {
+    padding: 6rem;
+    &__title {
+      margin-bottom: 5rem;
+      font-size: 3.5rem;
+      width: 90%;
     }
+    &__subtitle {
+      width: 90%;
+      margin-bottom: 8rem;
+      font-size: 2.2rem;
+      &::after {
+        bottom: -15%;
+      }
+    }
+    &__picture {
+      height: 110px;
+    }
+    .btn--intro {
+      display: flex;
+      text-align: center;
+    }
+  }
 }
 @media (max-width: 575px) {
-    .intro {
-        padding: 3rem 0;
-        &__title {
-            font-size: 2.4rem;
-            width: 95%;
-            margin-bottom: 3rem;
-        }
-        &__subtitle {
-            margin-bottom: 6rem;
-            width: 100%;
-            font-size: 1.7rem;
-            line-height: 1.2;
-            & p {
-                margin-top: 1.8rem;
-            }
-        }
-        &__picture {
-            height: 8rem;
-            width: 8rem;
-        }
+  .intro {
+    padding: 3rem 0;
+    &__title {
+      font-size: 2.4rem;
+      width: 95%;
+      margin-bottom: 3rem;
     }
+    &__subtitle {
+      margin-bottom: 6rem;
+      width: 100%;
+      font-size: 1.7rem;
+      line-height: 1.2;
+      & p {
+        margin-top: 1.8rem;
+      }
+    }
+    &__picture {
+      height: 8rem;
+      width: 8rem;
+    }
+  }
 }
